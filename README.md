@@ -12,31 +12,34 @@ Well, I have made this with the help of **NFC TAGS**. How it works is simple: wh
 
 ## Zine
 [zine](/doc/zine.pdf)
-![zine](/image/zine.png)
-## Photos of Car and Remote 📸
+![zine](/image/doc/zine.png)
 
-### Car Pics
+## Hardware Showcase 🛠️
+### Photos of Car and Remote 📸
 
-![Car](/image/C1.png)  
-![Car 2](/image/C2.png)  
-![Car 3](/image/C3.png)
+#### Car 
 
-### Remote
+![Car](/image/cad/car/C1.png)  
+![Car 2](/image/cad/car/C2.png)  
+![Car 3](/image/cad/car/C3.png)
 
-![Remote](/image/R1.png)  
-![Remote 2](/image/R2.png)  
-![Remote 3](/image/R3.png)
-## Circuit Diagram
+#### Remote
 
-### Car PCB
+![Remote](/image/cad/rc/R1.png)  
+![Remote 2](/image/cad/rc/R2.png)  
+![Remote 3](/image/cad/rc/R3.png)
 
-![Car PCB](/image/CAR.png)
+### Circuit & Diagram
 
-### Remote PCB
+#### Car Schematics
 
-![Remote PCB](/image/RC.png)  
-![PCB 1](/image/pcb-1.png)  
-![PCB 2](/image/pcb-2.png)
+![Car Schematics](/image/schematic/car/CAR.png)
+
+#### Remote PCB & Schematics
+
+ ![Remote Schematics](/image/schematic/rc/RC.png) 
+![PCB 1](/image/pcb/rc/pcb-1.png)  
+![PCB 2](/image/pcb/rc/pcb-2.png)
 
 ## Motivation
 
