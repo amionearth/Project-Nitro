@@ -2,48 +2,50 @@
 
 ### FPV RC Racing Car with Game Effects
 
-Have you ever wondered about having a **FPV RC Racing Car** with game effects such as:
+Have you ever wondered about having a **FPV RC Racing Car** with games effects such as:
 - Boost
 - Gun
 - Health
-- Drift (Bad effects and more)
+- Drift 
+- And more effects
+Well I have made this with the help of **NFC TAGS**. How it works is simple: when each car has an NFC reader underneath it  and when it passes over a NFC tag, it will detect the code and look for what power or bad effect it is. Then It can pull that effect whenever we want. Beat your opponent and win with super powers using our own strategy to win the game! all with our own custom path with what you have in your house.
 
-Well, I have made this with the help of **NFC TAGS**. How it works is simple: when each car has an NFC reader underneath, and when it passes over a NFC tag, it will detect the code and look for what power or bad effect it is. Then I can pull that effect whenever we want. Beat your opponent and win with super powers using our own strategy to win the game!## Zine
+# Zine
 [zine](/doc/zine.pdf)
 ![zine](/image/doc/zine.png)
 
-## Hardware Showcase 🛠️
-### Photos of Car and Remote 📸
+# Hardware Showcase 🛠️
+## Photos of Car and Remote 📸
 
-#### Car 
+### Car 
 
 ![Car](/image/cad/car/C1.png)  
 ![Car 2](/image/cad/car/C2.png)  
 ![Car 3](/image/cad/car/C3.png)
 
-#### Remote
+### Remote
 
 ![Remote](/image/cad/rc/R1.png)  
 ![Remote 2](/image/cad/rc/R2.png)  
 ![Remote 3](/image/cad/rc/R3.png)
 
-### Circuit & Diagram
+## Circuit & Diagram
 
-#### Car Schematics
+### Car Schematics
 
 ![Car Schematics](/image/schematic/car/CAR.png)
 
-#### Remote PCB & Schematics
+### Remote PCB & Schematics
 
  ![Remote Schematics](/image/schematic/rc/RC.png) 
 ![PCB 1](/image/pcb/rc/pcb-1.png)  
 ![PCB 2](/image/pcb/rc/pcb-2.png)
 
-## Motivation
+# Motivation
 
 I have always wondered to play **RC car** like in games with boost, power, win, health etc.. because that all make more fun for the world and playing with friends makes it even more fun. So I built this car - it will give you a game vibe with RC FPV cars in real life, bringing more fun and joy to the world!## How to Build 🛠️
 
-### Car Assembly
+## Car Assembly
 
 After 3D printing, check the tolerance of each part and sand it smoothly for better look and placement. Then solder everything with wires, place each component in its designated position as shown in the `.step` files, glue the IR receiver and transmitter, tape or glue the batteries in their places, place ESP32 on the ESP tray and screw it well, then mount to the car body as shown.## Car Assembly
 
@@ -51,14 +53,14 @@ After 3D printing, check the tolerance of each part and sand it smoothly for bet
 4. Mount the N20 motor using two M3 screws.5. Install the steering servo.6.Mount the ESP32.7. Install the PN532 NFC module.8. Connect all electronics according to wiring diagram.9. Mount FPV cam. 10.Install battery
 11. scraw body
 
-### Remote Assembly
-## Car Assembly
+## Remote Assembly
+# Car Assembly
 
 1.3D print all STL files from `/cad/remote`.2. Sand the parts until they fit smoothly.3. Insert all M3 heat inserts.4. place the batter.5.Mound the ESP32.6. Mount PCB after soldering all switchs and LED. 7. Insert the button.8. Connect all electronics according to wiring diagram.9. Slide in the sreen and screw.10. Slide the bottom case.11.Close body.After 3D printing, check the tolerance of each part and sand it smoothly for better look and placement. Then solder everything with wires, place the battery first followed by ESP32, solder the switch to PCB and connect the GPIOs Don't forget to place the LCD screen holders to screw for better holding, slide down the bottom part and screw it also then paint everything.## How to Play/Setup 🎮
 
 When you turn on the remote and car, it will connect (if it's your first time,you may need to pair them) You'll get a web interface in phone or laptop for FPV.Once connected you have two modes:
 
-### Free Ride Mode
+## Free Ride Mode
 You can drive it as normal RC car without any special features.### Race Mode  
 In this mode, you need an opponent to play with. One of you will host the game and that person's car becomes the controller of the game also. The remote looks for players  when a player is found:
 - Flip the car and reegister all NFC tags again
@@ -66,21 +68,21 @@ In this mode, you need an opponent to play with. One of you will host the game a
 - Place everthing in place as you want
 - Everywhere, you can make your own track with anything you have
 - Play and win the game
-## Game Effects ⚡
+# Game Effects ⚡
 
-### Good Power-ups
+## Good Power-ups
 - **Boost** - Speed boost to move faster  
 - **Health** - Get more health  
 - **Shield** - Protection from enemy bullets  
 - **Bullets** - Shoot projectiles  
 
-### Bad Effects
+## Bad Effects
 - **Drift** - The car gets drift randomly  
 - **Random Control** - Controls switch randomly (forward becomes backward)  
 - **Slowness** - Car goes slowly  
 - **Damage** - Low health  
 
-### Bonus Feature
+## Bonus Feature
 All bad effects can be cleared by going to your own pit lane. ## How It Works ⚙️
 
 This all works with ESP-NOW protocol. The host's car maintains the rules and everything:
@@ -89,7 +91,7 @@ This all works with ESP-NOW protocol. The host's car maintains the rules and eve
 - `car(host) ↔ car(client)` - Host communicates with client cars  
 - `camera → WiFi web → phone, laptop...` - Video stream to viewer devices
 
-## Folder Structure 📁
+# Folder Structure 📁
 ```
 cad/
 
@@ -114,21 +116,21 @@ firmware/
 │   └── FPV camera firmware
 ```
 
-### Car Section
+## Car Section
 - [Car CAD](/cad/car/) - 3D models and designs  
 - [Car Firmware](/firmware/car/) - Embedded code for the Car  
 - [FPV Camera](/firmware/car_cam/) - Camera firmware  
 - [Car Circuit](/circuit/car/) - Schematic diagrams  
 
-### Remote Section
+## Remote Section
 - [Remote CAD](/cad/remote/) - 3D models and designs  
 - [Remote Firmware](/firmware/remote/) - Embedded code for the remote  
 - [Remote circuit](/circuit/remote/) - Schematic diagrams
 
-## BOM (Bill of Material)
+# BOM (Bill of Material)
 [BOM](/doc/BOM.csv.csv)
 
-## Car Components 🛒
+# Car Components 🛒
 
 |**Item**|Number|Price|Links|
 |--------|-------------|-------------|---|
@@ -147,9 +149,9 @@ firmware/
 |M3x4mm Heat Set Inserts|20|₹80|[Robu](https://robu.in/product/m3-x-4-mm-brass-heat-set-knurl-threaded-round-insert-nut-25-pcs/)|
 |M3 x 6mm Screw|20|₹60|[RoboticsDNA](roboticsdna.in/product/m3-x-6mm-bolt-ss-304-csk-countersunk-philips-head-25-pcs/)|
 
-#### Approximate Car Cost: **₹4,000**
+### Approximate Car Cost: **₹4,000**
 
-### Remote
+## Remote
 
 |**Item**|Number|Price|Links|
 |--------|---------------|-------------|---|
@@ -162,10 +164,10 @@ firmware/
 |2.8 Inch tft LCD Display|1|₹780|[robocraze](https://robocraze.com/products/smartelex-2-8-inch-tft-lcd-display-240x320-color-lcd-screen-for-diy-electronics)|
 |m3x4mm heat set inserts|12|₹80|[Rubu](https://robu.in/product)|m3-x-4-mm-brass-heat-set-knurl-threaded-round-insert-nut-25-pcs/|
 |M3 x 6mm screw|12|₹60|[RoboticsDNA](roboticsdna.in/product/m3-x-6mm-bolt-ss-304-csk-countersunk-philips-head-25-pcs/)
-#### Approximate Remote Cost
+### Approximate Remote Cost
 ₹1700 
 
-### Total Approximate Cost for each
+## Total Approximate Cost for each
 
 |Part|Cost|
 |-----|-----|
