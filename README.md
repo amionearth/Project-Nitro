@@ -14,6 +14,11 @@ Well I have made this with the help of **NFC TAGS**. How it works is simple: whe
 [zine](/doc/zine.pdf)
 ![zine](/image/doc/zine.png)
 
+# Motivation
+
+I have always wondered to play **RC car** like in games with boost, power, win, health etc.. because that all make more fun for the world and playing with friends makes it even more fun. So I built this car - it will give you a game vibe with RC FPV cars in real life, bringing more fun and joy to the world!## How to Build 🛠️
+
+
 # Hardware Showcase 🛠️
 ## Photos of Car and Remote 📸
 
@@ -41,27 +46,57 @@ Well I have made this with the help of **NFC TAGS**. How it works is simple: whe
 ![PCB 1](/image/pcb/rc/pcb-1.png)  
 ![PCB 2](/image/pcb/rc/pcb-2.png)
 
-# Motivation
+## Assembling
+### Car
+add screw and heat sink here:
+![car](/image/screw/car/car.png)
+### Remote
 
-I have always wondered to play **RC car** like in games with boost, power, win, health etc.. because that all make more fun for the world and playing with friends makes it even more fun. So I built this car - it will give you a game vibe with RC FPV cars in real life, bringing more fun and joy to the world!## How to Build 🛠️
+![Rc](/image/schematic/rc/RC.png)
+
 
 ## Car Assembly
 
-After 3D printing, check the tolerance of each part and sand it smoothly for better look and placement. Then solder everything with wires, place each component in its designated position as shown in the `.step` files, glue the IR receiver and transmitter, tape or glue the batteries in their places, place ESP32 on the ESP tray and screw it well, then mount to the car body as shown.## Car Assembly
+After 3D printing, check the tolerance of each part and sand it smoothly for better look and placement. Then solder everything with wires, place each component in its designated position as shown in the `.step & .f3d` files,with the screw and glue. glue the IR receiver , transmitter and batteries in their places, place ESP32 on the ESP tray and screw it well, then mount to the car body as shown.## Car Assembly
 
-1.3D print all STL files from `/cad/car`.2. Sand the parts until they fit smoothly.3. Insert all M3 heat inserts
-4. Mount the N20 motor using two M3 screws.5. Install the steering servo.6.Mount the ESP32.7. Install the PN532 NFC module.8. Connect all electronics according to wiring diagram.9. Mount FPV cam. 10.Install battery
+1. 3D print all STL files from `/cad/car`. 
+2. Sand the parts until they fit smoothly.
+3. Insert all M3 heat inserts
+4. Mount the N20 motor using two M3 screws.
+5. Install the steering servo.
+6. Mount the ESP32.
+7. Install the PN532 NFC module.
+8. Connect all electronics according to wiring diagram.
+9. Mount FPV cam. 
+10. Install battery
 11. scraw body
+as shown in this places.
+![car](/image/screw/car/car.png)
 
 ## Remote Assembly
 # Car Assembly
 
-1.3D print all STL files from `/cad/remote`.2. Sand the parts until they fit smoothly.3. Insert all M3 heat inserts.4. place the batter.5.Mound the ESP32.6. Mount PCB after soldering all switchs and LED. 7. Insert the button.8. Connect all electronics according to wiring diagram.9. Slide in the sreen and screw.10. Slide the bottom case.11.Close body.After 3D printing, check the tolerance of each part and sand it smoothly for better look and placement. Then solder everything with wires, place the battery first followed by ESP32, solder the switch to PCB and connect the GPIOs Don't forget to place the LCD screen holders to screw for better holding, slide down the bottom part and screw it also then paint everything.## How to Play/Setup 🎮
+1. 3D print all STL files from `/cad/remote`.
+2. Sand the parts until they fit smoothly.
+3. Insert all M3 heat inserts.
+as shown in this places.
+![Rc](/image/schematic/rc/RC.png)
+4. place the batter.
+5. Mound the ESP32.
+6. Mount PCB after soldering all switchs and LED. 
+7. Insert the button.
+8. connect all electronics according to wiring diagram.
+9. Slide in the sreen and screw.
+10. slide the bottom case.
+11. Close body.
 
-When you turn on the remote and car, it will connect (if it's your first time,you may need to pair them) You'll get a web interface in phone or laptop for FPV.Once connected you have two modes:
+# How to Play/Setup 🎮
+
+when you turn on the remote and car, it will connect (if it's your first time,you may need to pair them with car) You'll get a web interface in phone or laptop for FPV.Once connected you have two modes:
 
 ## Free Ride Mode
-You can drive it as normal RC car without any special features.### Race Mode  
+You can drive it as normal RC car without any special features.
+## Race Mode  
 In this mode, you need an opponent to play with. One of you will host the game and that person's car becomes the controller of the game also. The remote looks for players  when a player is found:
 - Flip the car and reegister all NFC tags again
 - Accept the win gate tag and pit lane
@@ -95,38 +130,39 @@ This all works with ESP-NOW protocol. The host's car maintains the rules and eve
 ```
 cad/
 
-├── car/
-│   └── car.step
+|- car/
+|  |- car.step
 
-├── remote/
-│   └── Remote.step
+|- remote/
+|   |- Remote.step
 
-├── nfc/
-│   └── nfc tag sticker.step
+|- nfc/
+|   |-nfc tag sticker.step
 
 firmware/
 
-├── car/
-│   └── Car firmware
+| - car/
+|   |-Car firmware
 
-├── remote/
-│   └── Remote firmware
+|- remote/
+|   |-Remote firmware
 
-├── camera/
-│   └── FPV camera firmware
+|- camera/
+|   |-FPV camera firmware
 ```
 
 ## Car Section
-- [Car CAD](/cad/car/) - 3D models and designs  
-- [Car Firmware](/firmware/car/) - Embedded code for the Car  
-- [FPV Camera](/firmware/car_cam/) - Camera firmware  
+- [Car CAD](/cad/car/) - 3d models and designs  
+- [Car Firmware](/firmware/car/) - Embeddedcode for the Car  
+- [FPV Camera](/firmware/car_cam/) - camera firmware  
 - [Car Circuit](/circuit/car/) - Schematic diagrams  
+- [car srcew hole](/image/screw/car/)
 
 ## Remote Section
 - [Remote CAD](/cad/remote/) - 3D models and designs  
 - [Remote Firmware](/firmware/remote/) - Embedded code for the remote  
 - [Remote circuit](/circuit/remote/) - Schematic diagrams
-
+- [remote srcew hole](/image/screw/remote/)
 # BOM (Bill of Material)
 [BOM](/doc/BOM.csv.csv)
 
@@ -161,8 +197,8 @@ firmware/
 |TP4056 Type-C Mini|1|₹49|[robocraze](https://robocraze.com/products/tp4056-battery-charger-c-type-module-with-protection-1)|
 |3.3V Small Piezo Buzzer|1|₹30|https://robocraze.com/products/3-volts-buzzer-small|
 |5mm  RGB LED|1|₹15|[robocraze](https://robocraze.com/products/5mm-common-anode-rgb-led-4pin-pack-of-10)|
-|2.8 Inch tft LCD Display|1|₹780|[robocraze](https://robocraze.com/products/smartelex-2-8-inch-tft-lcd-display-240x320-color-lcd-screen-for-diy-electronics)|
-|m3x4mm heat set inserts|12|₹80|[Rubu](https://robu.in/product)|m3-x-4-mm-brass-heat-set-knurl-threaded-round-insert-nut-25-pcs/|
+|2.8 Inch tft LcD display|1|₹780|[robocraze](https://robocraze.com/products/smartelex-2-8-inch-tft-lcd-display-240x320-color-lcd-screen-for-diy-electronics)|
+|m3x4mm heatset inserts|12|₹80|[Rubu](https://robu.in/product)|m3-x-4-mm-brass-heat-set-knurl-threaded-round-insert-nut-25-pcs/|
 |M3 x 6mm screw|12|₹60|[RoboticsDNA](roboticsdna.in/product/m3-x-6mm-bolt-ss-304-csk-countersunk-philips-head-25-pcs/)
 ### Approximate Remote Cost
 ₹1700 
