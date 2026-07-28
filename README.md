@@ -6,19 +6,11 @@ Have you ever wondered about having a **FPV RC Racing Car** with games effects s
 - Boost
 - Gun
 - Health
-<<<<<<< Updated upstream
 - Drift 
 - And more effects
 Well I have made this with the help of **NFC TAGS**. How it works is simple: when each car has an NFC reader underneath it  and when it passes over a NFC tag, it will detect the code and look for what power or bad effect it is. Then It can pull that effect whenever we want. Beat your opponent and win with super powers using our own strategy to win the game! all with our own custom path with what you have in your house.
 
 # Zine
-=======
-- Drift (Bad effects and more)
-2       211
-Well, I have made this with the help of **NFC TAGS**. How it works is simple: when each car has an NFC reader underneath, and when it passes over a NFC tag, it will detect the code and look for what power or bad effect it is. Then I can pull that effect whenever we want. Beat your opponent and win with super powers using our own strategy to win the game!
-
-## Zine
->>>>>>> Stashed changes
 [zine](/doc/zine.pdf)
 ![zine](/image/doc/zine.png)
 
